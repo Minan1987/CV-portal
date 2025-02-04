@@ -1,11 +1,13 @@
-import { ThemeProvider } from "@mui/material";
+import { ThemeProvider, Typography } from "@mui/material";
 import { CacheProvider } from "@emotion/react";
 import createCache from '@emotion/cache';
 import { CssBaseline } from "@mui/material";
 import { prefixer } from "stylis";
 import rtlPlugin from 'stylis-plugin-rtl';
 import { Helmet, HelmetProvider } from "react-helmet-async";
-import { theme } from '../ui/Theme';
+import { themeRTL } from '../ui/Theme';
+import Grid2 from '@mui/material/Grid2';
+import Sidebar from "../Sidebar";
 
 export const cacheRTL = createCache({
     key: 'muirtl',
@@ -15,13 +17,15 @@ export const cacheRTL = createCache({
 const MainLayout = ({ children }) => {
     return (
         <CacheProvider value={cacheRTL}>
-            <ThemeProvider theme={theme}>
+            <ThemeProvider theme={themeRTL}>
                 <HelmetProvider>
                     <Helmet>
                         <title>پورتال شخصی مینا نظری</title>
                     </Helmet>
                     <CssBaseline />
-                    {children}
+                    <Grid2 container sx={{ height: '100vh' }}>
+                       {children} 
+                    </Grid2>
                 </HelmetProvider>
             </ThemeProvider>
         </CacheProvider>

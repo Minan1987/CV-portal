@@ -1,5 +1,5 @@
 import { createTheme } from "@mui/material";
-export const theme = createTheme({
+export const themeRTL = createTheme({
     direction: "rtl",
     typography: {
         fontFamily: [
