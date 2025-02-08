@@ -1,17 +1,19 @@
-import React from 'react'
 import Grid2 from '@mui/material/Grid2';
-import { Typography } from '@mui/material';
+import { grey } from '@mui/material/colors';
 
-const ContentContainer = () => {
+const ContentContainer = ({ children }) => {
     return (
-        <Grid2 xs={12}
-            sm={12}
-            md={8}
-            lg={9}
-            xl={9}
+        <Grid2 sx={{ backgroundColor: grey[300] }}
+        size={{
+            xs:12,
+            sm:12,
+            md:9,
+            lg:10,
+            xl:10,
+        }}
         >
-            <Typography variant="h4"> محتوای اصلی سایت</Typography>
-        </Grid2>
+            {children}
+        </Grid2 >
     )
 }
 

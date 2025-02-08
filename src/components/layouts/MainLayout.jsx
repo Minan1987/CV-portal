@@ -5,9 +5,10 @@ import { CssBaseline } from "@mui/material";
 import { prefixer } from "stylis";
 import rtlPlugin from 'stylis-plugin-rtl';
 import { Helmet, HelmetProvider } from "react-helmet-async";
+
 import { themeRTL } from '../ui/Theme';
+
 import Grid2 from '@mui/material/Grid2';
-import Sidebar from "../Sidebar";
 
 export const cacheRTL = createCache({
     key: 'muirtl',
@@ -23,7 +24,7 @@ const MainLayout = ({ children }) => {
                         <title>پورتال شخصی مینا نظری</title>
                     </Helmet>
                     <CssBaseline />
-                    <Grid2 container sx={{ height: '100vh' }}>
+                    <Grid2 container sx={{ height: '100vh', display: "flex" }}>
                        {children} 
                     </Grid2>
                 </HelmetProvider>

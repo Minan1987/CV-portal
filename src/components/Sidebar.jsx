@@ -1,77 +1,63 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Grid2 from '@mui/material/Grid2';
-import { Typography, Avatar, Box, Divider, Hidden, Tabs, Tab } from '@mui/material';
-import avatarImg from '../../public/images/mypic.jpeg'
 import { grey } from '@mui/material/colors';
-import { SentimentSatisfiedAltOutlined, CardMembershipOutlined, SchoolOutlined, DevicesOutlined, Diversity2Outlined } from '@mui/icons-material';
+import { Box, Drawer, Fab } from '@mui/material';
+import DrawerContent from './ui/DrawerContent';
+import { MenuRounded } from "@mui/icons-material";
 
 const Sidebar = ({ value, handleChange }) => {
-    const tabProps = (index) => {
-        return {
-            id: `sidebar-tab-${index}`,
-            "aria-controls": `tab-panel-${index}`
-        }
+    const [drawerOpen, setDrawerOpen] = useState(false);
+    const handleDrawerToggle = () => {
+        setDrawerOpen(!drawerOpen);
     }
     return (
-        <Hidden mdDown>
-            <Grid2 xs={0}
-                sm={0}
-                md={4}
-                lg={3}
-                xl={3}
-                sx={{ bgcolor: grey[800] }}>
-                <Box sx={{ textAlign: "center" }}>
-                    <Avatar src={avatarImg} variant='rounded' sx={{ width: "200px", height: "200px", margin: 2 }} />
-                    <Typography variant="h5" color='whitesmoke'>
-                        مینا نظری
-                    </Typography>
-                    <Typography variant='caption' sx={{ color: grey[500] }}>توسعه دهنده فرانت اند</Typography>
-                    <Divider variant='middle' color={grey[600]} />
-                    <Box>
-                        <Tabs value={value}
-                            onChange={handleChange}
-                            orientation='vertical'
-                            variant='scrollable'
-                            scrollButtons
-                            allowScrollButtonsMobile
-                        >
-                            <Tab label="درباره من"
-                                icon={<SentimentSatisfiedAltOutlined />}
-                                iconPosition="start"
-                                sx={{ color: grey[50] }}
-                                {...tabProps(0)}
-                            />
-                            <Tab label="دوره ها و گواهینامه ها"
-                                icon={<CardMembershipOutlined />}
-                                iconPosition="start"
-                                sx={{ color: grey[50] }}
-                                {...tabProps(1)}
-                            />
-                            <Tab label="سوابق تحصیلی"
-                                icon={<SchoolOutlined />}
-                                iconPosition="start"
-                                sx={{ color: grey[50] }}
-                                {...tabProps(2)}
-                            />
-                            <Tab label="سوابق شغلی"
-                                icon={<Diversity2Outlined />}
-                                iconPosition="start"
-                                sx={{ color: grey[50] }}
-                                {...tabProps(3)}
-                            />
-                            <Tab label="نمونه کارها"
-                                icon={<DevicesOutlined />}
-                                iconPosition="start"
-                                sx={{ color: grey[50] }}
-                                {...tabProps(4)}
-                            />
-                        </Tabs>
-                    </Box>
-                    <Divider variant='middle' color={grey[600]} />
+        <Grid2 sx={{ bgcolor: grey[800] }}
+            size={{
+                xs: 0,
+                sm: 0,
+                md: 3,
+                lg: 2,
+                xl: 2,
+            }}
+        >
+            <Box sx={{
+                display: {
+                    xs: "block",
+                    sm: "block",
+                    md: "none",
+                    lg: "none"
+                }
+            }}>
+                <Fab aria-label='sidebar'
+                      size='medium'  
+                      sx={{m:2}}
+                      onClick={handleDrawerToggle}
+                >
+                    <MenuRounded />
+                </Fab>
+            </Box>
+            <DrawerContent value={value} handleChange={handleChange} />
+            <Drawer
+                open={drawerOpen}
+                variant='temporary'
+                onClose={() => setDrawerOpen(false)}
+                sx={{
+                    "& .MuiDrawer-paper": {
+                        width: "300px",
+                        bgcolor:grey[800]
+                    },
+                    display: {
+                        xs: "block",
+                        sm: "block",
+                        md: "none",
+                        lg: "none"
+                    }
+                }}
+            >
+                <DrawerContent value={value} handleChange={handleChange} />
+            </Drawer>
 
-                </Box>
-            </Grid2>
-        </Hidden>
+        </Grid2>
     )
 }
 
