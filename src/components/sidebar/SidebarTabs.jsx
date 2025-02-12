@@ -1,4 +1,6 @@
 import React from 'react'
+import { useContext } from 'react';
+import Context from '../../context/Context';
 import { Box, Tabs, Tab } from '@mui/material';
 import {
     SentimentSatisfiedAltOutlined,
@@ -10,7 +12,8 @@ import {
 } from '@mui/icons-material';
 import { grey } from '@mui/material/colors';
 
-const SidebarTabs = ({ value, handleChange, setDrawerOpen }) => {
+const SidebarTabs = () => {
+    const {value, handleChange, setDrawerOpen} = useContext(Context);
     const tabProps = (index) => {
         return {
             id: `sidebar-tab-${index}`,
