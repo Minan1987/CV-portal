@@ -5,3 +5,14 @@
 .muirtl-oewvya-MuiTabs-indicator {
     background-color: orange !important;
 }
+.MuiTab-root {
+    min-height: 50px !important;
+    background-color: #555 !important;
+    margin: 5px 0 !important;
+    border-radius: 3px !important;
+    
+}
+
+.MuiTab-root.Mui-selected {
+    color: orange !important;
+}

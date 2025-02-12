@@ -6,7 +6,7 @@ import { prefixer } from "stylis";
 import rtlPlugin from 'stylis-plugin-rtl';
 import { Helmet, HelmetProvider } from "react-helmet-async";
 
-import { themeRTL } from '../ui/Theme';
+import { themeRTL } from '../themes/Theme';
 
 import Grid2 from '@mui/material/Grid2';
 
