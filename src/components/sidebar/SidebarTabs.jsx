@@ -2,24 +2,12 @@ import React from 'react'
 import { useContext } from 'react';
 import Context from '../../context/Context';
 import { Box, Tabs, Tab } from '@mui/material';
-import {
-    SentimentSatisfiedAltOutlined,
-    CardMembershipOutlined,
-    SchoolOutlined,
-    DevicesOutlined,
-    Diversity2Outlined,
-    RoofingOutlined,
-} from '@mui/icons-material';
 import { grey } from '@mui/material/colors';
+import { tabsData } from "../data/tabsData-sidebar"
 
 const SidebarTabs = () => {
-    const {value, handleChange, setDrawerOpen} = useContext(Context);
-    const tabProps = (index) => {
-        return {
-            id: `sidebar-tab-${index}`,
-            "aria-controls": `tabpanel-${index}`,
-        };
-    };
+    const { value, handleChange, setDrawerOpen } = useContext(Context);
+    const data = tabsData();
     return (
         <Box sx={{
             textAlign: "center",
@@ -34,48 +22,18 @@ const SidebarTabs = () => {
                 allowScrollButtonsMobile
                 sx={{ justifyContent: "start" }}
             >
-                <Tab label="صفحه اصلی"
-                    icon={<RoofingOutlined />}
-                    iconPosition="start"
-                    sx={{ color: grey[50], justifyContent: "start" }}
-                    onClick={() => setDrawerOpen(false)}
-                    {...tabProps(0)}
-                />
-                <Tab label="درباره من"
-                    icon={<SentimentSatisfiedAltOutlined />}
-                    iconPosition="start"
-                    sx={{ color: grey[50], justifyContent: "start" }}
-                    onClick={() => setDrawerOpen(false)}
-                    {...tabProps(0)}
-                />
-                <Tab label="دوره ها و گواهینامه ها"
-                    icon={<CardMembershipOutlined />}
-                    iconPosition="start"
-                    sx={{ color: grey[50], justifyContent: "start" }}
-                    onClick={() => setDrawerOpen(false)}
-                    {...tabProps(1)}
-                />
-                <Tab label="سوابق تحصیلی"
-                    icon={<SchoolOutlined />}
-                    iconPosition="start"
-                    sx={{ color: grey[50], justifyContent: "start" }}
-                    onClick={() => setDrawerOpen(false)}
-                    {...tabProps(2)}
-                />
-                <Tab label="سوابق شغلی"
-                    icon={<Diversity2Outlined />}
-                    iconPosition="start"
-                    sx={{ color: grey[50], justifyContent: "start" }}
-                    onClick={() => setDrawerOpen(false)}
-                    {...tabProps(3)}
-                />
-                <Tab label="نمونه کارها"
-                    icon={<DevicesOutlined />}
-                    iconPosition="start"
-                    sx={{ color: grey[50], justifyContent: "start" }}
-                    onClick={() => setDrawerOpen(false)}
-                    {...tabProps(4)}
-                />
+                {
+                    data.map((tab, index) => (
+                        <Tab key={index}
+                            label={tab.label}
+                            icon={tab.icon}
+                            iconPosition="start"
+                            sx={{ color: grey[50], justifyContent: "start" }}
+                            onClick={() => setDrawerOpen(false)}
+                            {...tab}
+                        />
+                    ))
+                }
             </Tabs>
         </Box>
     )
