@@ -14,7 +14,7 @@ const SidebarFooter = ({ open }) => {
             sx={{
                 pt: 2,
                 textAlign: "center",
-                display: open ? "block" : "none",
+                // display: open ? "block" : "none",
             }}
         >
             <Divider variant='middle'
@@ -23,7 +23,8 @@ const SidebarFooter = ({ open }) => {
                     display: {
                         xs: "none",
                         sm: "none",
-                        md: "block"
+                        md: "block",
+                        lg: "block"
                     }
                 }} />
             <Box sx={{ display: "flex", justifyContent: "center", alignItems: "center" }}>

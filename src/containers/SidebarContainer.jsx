@@ -4,7 +4,7 @@ import { grey } from '@mui/material/colors';
 
 const SidebarContainer = ({ children }) => {
     return (
-        <Grid2 sx={{ bgcolor: grey[800] }}
+        <Grid2 sx={{ bgcolor: grey[800], height:"100vh", overflowY:"auto", overflowX:"hidden" }}
             size={{
                 xs: 0,
                 sm: 0,

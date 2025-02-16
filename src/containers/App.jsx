@@ -3,7 +3,7 @@ import MainLayout from '../template/layouts/MainLayout';
 import ContentContainer from './ContentContainer';
 import SidebarContainer from './SidebarContainer';
 import { Sidebar } from '../components/sidebar';
-import TabPanel from '../components/TabPanel';
+import Page from '../pages/Page';
 import {
   Divider,
   Typography,
@@ -15,6 +15,7 @@ import {
 import { grey, orange } from '@mui/material/colors';
 import { CheckCircleRounded } from '@mui/icons-material';
 import Context from '../context/Context';
+import { Home } from '../pages';
 
 
 const App = () => {
@@ -24,20 +25,20 @@ const App = () => {
     setValue(newValue);
   }
   return (
-    <Context.Provider value={{value, handleChange, drawerOpen, setDrawerOpen}}>
+    <Context.Provider value={{ value, handleChange, drawerOpen, setDrawerOpen }}>
       <MainLayout>
 
         {/* ----Sidebar Section---- */}
         <SidebarContainer>
-          <Sidebar/>
+          <Sidebar />
         </SidebarContainer>
 
         {/* ----Main Section---- */}
         <ContentContainer >
-          <TabPanel value={value} index={0}>
-            <Divider>صفحه اصلی</Divider>
-          </TabPanel>
-          <TabPanel value={value} index={1}>
+          <Page value={value} index={0}>
+            <Home />
+          </Page>
+          <Page value={value} index={1}>
             <Box variant='h4' sx={{ margin: "30px auto" }}>
               <Divider variant='middle'>توسعه‌دهنده فرانت‌اند<br /><Typography variant='body1' color={grey[500]}>خالق تجربه‌های دیجیتال جذاب</Typography></Divider>
               <Box>
@@ -57,19 +58,19 @@ const App = () => {
                 </Typography>
               </Box>
             </Box>
-          </TabPanel>
-          <TabPanel value={value} index={2}>
+          </Page>
+          <Page value={value} index={2}>
             <Divider>دوره ها و گواهینامه ها</Divider>
-          </TabPanel>
-          <TabPanel value={value} index={3}>
+          </Page>
+          <Page value={value} index={3}>
             <Divider>سوابق تحصیلی</Divider>
-          </TabPanel>
-          <TabPanel value={value} index={4}>
+          </Page>
+          <Page value={value} index={4}>
             <Divider>سوابق شغلی</Divider>
-          </TabPanel>
-          <TabPanel value={value} index={5}>
+          </Page>
+          <Page value={value} index={5}>
             <Divider>نمونه کارها</Divider>
-          </TabPanel>
+          </Page>
         </ContentContainer>
       </MainLayout >
     </Context.Provider>

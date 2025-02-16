@@ -13,7 +13,9 @@ const DrawerActionButton = () => {
                 sm: "block",
                 md: "none",
                 lg: "none"
-            }
+            },
+            zIndex: 3,
+            position: "absolute"
         }}>
             <Fab aria-label='sidebar'
                 size='medium'
