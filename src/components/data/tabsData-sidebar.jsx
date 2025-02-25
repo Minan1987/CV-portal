@@ -3,7 +3,7 @@ import {
     CardMembershipOutlined,
     SchoolOutlined,
     DevicesOutlined,
-    Diversity2Outlined,
+    Diversity1Outlined,
     RoofingOutlined,
 } from '@mui/icons-material';
 
@@ -21,7 +21,7 @@ export const tabsData = () => {
         { label: "درباره من", icon: <SentimentSatisfiedAltOutlined />, ...tabProps(1) },
         { label: "دوره ها و گواهینامه ها", icon: <CardMembershipOutlined />, ...tabProps(2) },
         { label: "سوابق تحصیلی", icon: <SchoolOutlined />, ...tabProps(3) },
-        { label: "سوابق شغلی", icon: <Diversity2Outlined />, ...tabProps(4) },
+        { label: "سوابق شغلی", icon: <Diversity1Outlined />, ...tabProps(4) },
         { label: "نمونه کارها", icon: <DevicesOutlined />, ...tabProps(4) },
     ]
     return tabs

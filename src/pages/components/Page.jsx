@@ -10,7 +10,7 @@ const TabPanel = (props) => {
             id={`tabpanel-${index}`}
             aria-labelledby={`sidebar-tab-${index}`}
             {...others}
-            sx={{height:"100vh"}}
+            sx={{height:"100vh", overflowY:"auto"}}
         >
             {value === index && (
                 <Box>

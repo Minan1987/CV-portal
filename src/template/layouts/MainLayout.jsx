@@ -1,4 +1,4 @@
-import { ThemeProvider, Typography } from "@mui/material";
+import { Grid, ThemeProvider } from "@mui/material";
 import { CacheProvider } from "@emotion/react";
 import createCache from '@emotion/cache';
 import { CssBaseline } from "@mui/material";
@@ -24,9 +24,9 @@ const MainLayout = ({ children }) => {
                         <title>پورتال شخصی مینا نظری</title>
                     </Helmet>
                     <CssBaseline />
-                    <Grid2 container sx={{ height: '100vh', display: "flex" }}>
-                       {children} 
-                    </Grid2>
+                    <Grid container sx={{ height: '100vh', display: "flex" }}>
+                        {children}
+                    </Grid>
                 </HelmetProvider>
             </ThemeProvider>
         </CacheProvider>

@@ -1,6 +1,9 @@
 import { createTheme } from "@mui/material";
 export const themeRTL = createTheme({
     direction: "rtl",
+    palette: {
+        mode: 'dark',
+      },
     typography: {
         fontFamily: [
             'vazir',
