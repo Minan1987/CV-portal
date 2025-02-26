@@ -93,7 +93,7 @@ const Educations = () => {
               }}
             >
             </Typography>
-            <ListItemText sx={{ pl: 3 }}>کارشناسی ارشد کارآفرینی (روندهای کسب و کار الکترونیکی)<br />
+            <ListItemText sx={{ pl: 3 }}>کارشناس ارشد کارآفرینی (روندهای کسب و کار الکترونیکی)<br />
               <Typography component="span"
                 sx={{
                   borderBottom: "1px solid #777",
@@ -164,7 +164,7 @@ const Educations = () => {
               }}
             >
             </Typography>
-            <ListItemText sx={{ pl: 3 }}>مدرک کارشناسی مهندسی کامپیوتر – مهندس نرم افزار<br />
+            <ListItemText sx={{ pl: 3 }}>مدرک کارشناسی مهندسی کامپیوتر – گرایش نرم افزار<br />
               <Typography component="span"
                 sx={{
                   borderBottom: "1px solid #777",
