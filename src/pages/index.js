@@ -4,3 +4,4 @@ export {default as Certificates} from './Certificates';
 export {default as Educations} from './Educations';
 export {default as SampleWorks} from './SampleWorks';
 export {default as CareerHostory} from './CareerHistory';
+export {default as Contact} from './Contcat';

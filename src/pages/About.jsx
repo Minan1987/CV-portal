@@ -7,7 +7,8 @@ import {
     PhonelinkRingOutlined,
     FmdGoodOutlined,
     LanguageOutlined,
-    LinkedIn
+    LinkedIn,
+    GitHub
 } from '@mui/icons-material';
 import { grey, orange } from '@mui/material/colors';
 import SkillsCarousel from './components/SkillsCarosel';
@@ -114,10 +115,10 @@ const About = () => {
                     </ListItem>
                     <ListItem>
                         <Typography variant='body1' component="span" color='orange' sx={{ paddingRight: "10px" }}>
-                            <LanguageOutlined fontSize='medium' sx={{ color: "orange" }} />
+                            <GitHub fontSize='medium' sx={{ color: "orange" }} />
                         </Typography>
                         <Typography variant='body1' component="span" color={grey[400]}>
-                            <a href='https://graphicalweb.ir/' target='_blank' style={{ color: "#bdbdbd", textDecoration: "none" }}>graphicalweb.ir</a>
+                            <a href='https://github.com/Minan1987' target='_blank' style={{ color: "#bdbdbd", textDecoration: "none" }}>github.com/Minan1987</a>
                         </Typography>
                     </ListItem>
                     <ListItem>
