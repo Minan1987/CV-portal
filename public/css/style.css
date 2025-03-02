@@ -1,3 +1,7 @@
+a{
+    text-decoration: none;
+    color: inherit;
+}
 .muirtl-3tyok0-MuiButtonBase-root-MuiTab-root.Mui-selected {
     color: orange !important;
 }

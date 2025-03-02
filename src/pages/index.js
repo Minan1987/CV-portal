@@ -1,7 +1,6 @@
 export {default as Home} from './Home';
 export {default as About} from './About';
-export {default as Certificates} from './Certificates';
-export {default as Educations} from './Educations';
+export {default as EducationsAndCareer} from './EducationsAndCareer';
 export {default as SampleWorks} from './SampleWorks';
-export {default as CareerHostory} from './CareerHistory';
+export {default as CoursesAndCertification} from './CoursesAndCertification';
 export {default as Contact} from './Contcat';

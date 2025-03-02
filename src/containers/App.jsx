@@ -6,7 +6,7 @@ import { Sidebar } from '../components/sidebar';
 import Page from '../pages/components/Page';
 import DrawerActionButton from '../components/drawer/DrawerActionButton'
 import Context from '../context/Context';
-import { Home, About, Educations, SampleWorks, CareerHostory, Contact } from '../pages';
+import { Home, About, SampleWorks, Contact,EducationsAndCareer, CoursesAndCertification } from '../pages';
 
 const App = () => {
   const [value, setValue] = useState(0);
@@ -32,10 +32,10 @@ const App = () => {
             <About />
           </Page>
           <Page value={value} index={2}>
-            <Educations />
+            <EducationsAndCareer />
           </Page>
           <Page value={value} index={3}>
-            <CareerHostory />
+            <CoursesAndCertification />
           </Page>
           <Page value={value} index={4}>
             <SampleWorks />

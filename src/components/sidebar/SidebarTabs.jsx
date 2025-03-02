@@ -20,7 +20,6 @@ const SidebarTabs = () => {
                 variant="scrollable"
                 scrollButtons
                 allowScrollButtonsMobile
-                textColor='warning'
                 sx={{ justifyContent: "start" }}
             >
                 {

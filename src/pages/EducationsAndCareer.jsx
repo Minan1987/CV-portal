@@ -1,9 +1,21 @@
-import React from 'react'
-import { Grid, Typography, Box, Divider, List, ListItem, ListItemText } from '@mui/material';
-import { SchoolOutlined } from '@mui/icons-material';
-import Certificates from './Certificates';
+import React, { useState } from 'react'
+import {
+  Grid,
+  Typography,
+  Box,
+  Divider,
+  List,
+  ListItem,
+  ListItemText,
+  ListSubheader
+} from '@mui/material';
+import { SchoolOutlined, ArrowLeftOutlined } from '@mui/icons-material';
 
-const Educations = () => {
+const EducationsAndCareer = () => {
+  const [open, setOpen] = useState(true);
+  const handleClick = () => [
+    setOpen(!open)
+  ]
   return (
     <>
       <Grid container>
@@ -14,7 +26,7 @@ const Educations = () => {
           lg={12}
         >
           <Box sx={{ display: "flex", justifyContent: "space-between", p: 3, width: 1 }}>
-            <Typography variant='h4' color='orange'>سوابق تحصیلی</Typography>
+            <Typography variant='h4' color='orange'>سوابق تحصیلی و شغلی</Typography>
             <SchoolOutlined fontSize='large' sx={{ color: "orange" }} />
           </Box>
           <Divider variant='middle'
@@ -25,11 +37,14 @@ const Educations = () => {
             }}
           />
         </Grid>
+        <Grid container sx={{ overflowX: "hidden" }}>
+        </Grid>
         <Grid item
           xs={12}
           sm={12}
           md={6}
           lg={6}
+          sx={{ maxWidth: "45%" }}
         >
           <Box sx={{ width: 1, textAlign: "center", pt: 2 }}>
             <Typography variant='h6'
@@ -55,12 +70,12 @@ const Educations = () => {
                   right: 0
                 }
               }}
-            >تحصیلات
+            >سوابق تحصیلی
             </Typography>
           </Box>
           <List sx={{
             position: "relative",
-            margin: "20px 0 20px 50px",
+            margin: "20px 0 20px 40px",
             padding: "50px 0 0 0",
             width: 1
           }}>
@@ -282,6 +297,7 @@ const Educations = () => {
           sm={12}
           md={6}
           lg={6}
+          sx={{ maxWidth: "45%" }}
         >
           <Box sx={{ width: 1, textAlign: "center", pt: 2 }}>
             <Typography variant='h6'
@@ -307,12 +323,12 @@ const Educations = () => {
                   right: 0
                 }
               }}
-            >تجارب
+            >تجارب حرفه ای
             </Typography>
           </Box>
           <List sx={{
             position: "relative",
-            margin: "20px 0 20px 50px",
+            margin: "20px 0 20px 40px",
             padding: "50px 0 0 0",
             width: 1
           }}>
@@ -347,15 +363,60 @@ const Educations = () => {
                 }}
               >
               </Typography>
-              <ListItemText sx={{ pl: 3 }}>گذراندن دوره <Typography component="span" sx={{ fontSize: "bold" }}>React JS</Typography><br />
-                <Typography component="span"
-                  sx={{
-                    borderBottom: "1px solid #777",
-                    fontSize: "0.8rem",
-                    color: '#777'
-                  }}
-                >در مجتمع فنی تهران(MFT)
-                </Typography>
+              <ListItemText sx={{ pl: 3 }}>
+                <Typography variant="h5" sx={{ fontSize: "1.1rem", pb: "10px" }}>(UI/UX) طراح رابط کاربری </Typography>
+                <Typography component="span" sx={{ fontWeight: "400" }}> شرکت فست کلیک (اولین آژانس دیجیتال مارکتینگ ایران) </Typography><br />
+                <a href="https://fastclick.agency/" >
+                  <Typography component="span"
+                    sx={{
+                      borderBottom: "1px solid #777",
+                      fontSize: "0.8rem",
+                      color: '#777'
+                    }}
+                  >
+                    WWW.fastclick.agency
+                  </Typography>
+                </a>
+                <List>
+                  <ListSubheader
+                    sx={{
+                      backgroundColor: "transparent",
+                      color: "orange",
+                      fontSize: "1rem"
+                    }}
+                  >
+                    وظایف و دستاوردها:
+                  </ListSubheader>
+                  <ListItem
+                    sx={{
+                      color: "#ccc",
+                      fontWeight: "300",
+                      fontSize: "0.9rem"
+                    }}
+                  >
+                    <ArrowLeftOutlined fontSize='small' /> توسعه و طراحی صفحات وب واکنشگرا با استفاده از ،HTML
+                    CSS
+                  </ListItem>
+                  <ListItem
+                    sx={{
+                      color: "#ccc",
+                      fontWeight: "300",
+                      fontSize: "0.9rem"
+                    }}
+                  ><ArrowLeftOutlined fontSize='small' /> مشارکت در طراحی رابط کاربری کاربرپسند و ارائه پیشنهادات
+                    برای بهبود تجربه کاربری
+                  </ListItem>
+                  <ListItem
+                    sx={{
+                      color: "#ccc",
+                      fontWeight: "300",
+                      fontSize: "0.9rem"
+                    }}
+                  ><ArrowLeftOutlined fontSize='small' /> همکاری با تیم های توسعه و بازاریابی برای اجرای
+                    طراحی های تعاملی که افزایش تعامل کاربران را به همراه
+                    داشت.
+                  </ListItem>
+                </List>
               </ListItemText>
               <Typography component="span"
                 sx={{
@@ -373,7 +434,7 @@ const Educations = () => {
                     color: "#fff"
                   }}
                 >
-                  1403
+                  1395
                 </Typography>
                 <Typography component="span"
                   sx={{
@@ -383,7 +444,7 @@ const Educations = () => {
                     color: "#fff"
                   }}
                 >
-                  1402
+                  1397
                 </Typography>
               </Typography>
             </ListItem>
@@ -418,16 +479,58 @@ const Educations = () => {
                 }}
               >
               </Typography>
-              <ListItemText sx={{ pl: 3 }}> گذراندن دوره وب <br /><Typography component="span" sx={{ fontSize: "bold" }}>Web Design ( HTML, CSS, Javascript )</Typography><br />
-                <Typography component="span"
-                  sx={{
-                    borderBottom: "1px solid #777",
-                    fontSize: "0.8rem",
-                    color: '#777'
-                  }}
-                >
-                  در مجتمع فنی تهران(MFT)
-                </Typography>
+              <ListItemText sx={{ pl: 3 }}>
+                <Typography variant="h5" sx={{ fontSize: "1.1rem", pb: "10px" }}>(UI/UX) طراح رابط کاربری </Typography>
+                <Typography component="span" sx={{ fontWeight: "400" }}> IIG(Iran Internet Group) </Typography><br />
+                <a href="https://snapp.ir/about/" >
+                  <Typography component="span"
+                    sx={{
+                      borderBottom: "1px solid #777",
+                      fontSize: "0.8rem",
+                      color: '#777'
+                    }}
+                  >
+                    WWW.snapp.ir
+                  </Typography>
+                </a>
+                <List>
+                  <ListSubheader
+                    sx={{
+                      backgroundColor: "transparent",
+                      color: "orange",
+                      fontSize: "1rem"
+                    }}
+                  >
+                    وظایف و دستاوردها:
+                  </ListSubheader>
+                  <ListItem
+                    sx={{
+                      color: "#ccc",
+                      fontWeight: "300",
+                      fontSize: "0.9rem"
+                    }}
+                  ><ArrowLeftOutlined /> طراحی و توسعه رابط کاربری برای وبسایت com.zoodroom،
+                    بهبود تجربه کاربری و افزایش رضایت کاربران
+                  </ListItem>
+                  <ListItem
+                    sx={{
+                      color: "#ccc",
+                      fontWeight: "300",
+                      fontSize: "0.9rem"
+                    }}
+                  ><ArrowLeftOutlined fontSize='small' /> همکاری با تیم های توسعه و بازاریابی برای تعریف نیازهای
+                    کاربر و ایجاد راه حل های مناسب.
+                  </ListItem>
+                  <ListItem
+                    sx={{
+                      color: "#ccc",
+                      fontWeight: "300",
+                      fontSize: "0.9rem"
+                    }}
+                  ><ArrowLeftOutlined fontSize='small' /> ایجاد پروتوتایپها و ماکتهای تعاملی با استفاده از
+                    ابزارهای طراحی مانند Figma و XD Adobe.
+                  </ListItem>
+                </List>
               </ListItemText>
               <Typography component="span"
                 sx={{
@@ -445,7 +548,7 @@ const Educations = () => {
                     color: "#fff"
                   }}
                 >
-                  1403
+                  1398
                 </Typography>
                 <Typography component="span"
                   sx={{
@@ -455,88 +558,15 @@ const Educations = () => {
                     color: "#fff"
                   }}
                 >
-                  1402
-                </Typography>
-              </Typography>
-            </ListItem>
-            <ListItem sx={{
-              position: "relative",
-              marginLeft: "10px",
-              padding: "20px",
-              transition: "all .5s ease-in-out",
-              mb: 5
-            }}>
-              <Typography component="span"
-                sx={{
-                  width: "2px",
-                  height: "100%",
-                  backgroundColor: "orange",
-                  left: "10px",
-                  top: 0,
-                  position: "absolute",
-                  "&::before, &::after": {
-                    content: '""',
-                    width: "10px",
-                    height: "10px",
-                    borderRadius: "50%",
-                    border: "2px solid orange",
-                    position: "absolute",
-                    right: "-4px",
-                    top: "-10px"
-                  },
-                  "&::after": {
-                    top: "100%"
-                  }
-                }}
-              >
-              </Typography>
-              <ListItemText sx={{ pl: 3 }}> گذراندن دوره طراحی رابط کاربری <br /><Typography component="span" sx={{ fontSize: "bold" }}>UI/UX Design</Typography><br />
-                <Typography component="span"
-                  sx={{
-                    borderBottom: "1px solid #777",
-                    fontSize: "0.8rem",
-                    color: '#777'
-                  }}
-                >
-                  در مجتمع فنی تهران(MFT)
-                </Typography>
-              </ListItemText>
-              <Typography component="span"
-                sx={{
-                  position: "absolute",
-                  height: "100%",
-                  left: "10px",
-                  top: 0
-                }}
-              >
-                <Typography component="span"
-                  sx={{
-                    position: "absolute",
-                    top: "-18px",
-                    transform: "translateX(-120%)",
-                    color: "#fff"
-                  }}
-                >
-                  1403
-                </Typography>
-                <Typography component="span"
-                  sx={{
-                    position: "absolute",
-                    bottom: "-18px",
-                    transform: "translateX(-120%)",
-                    color: "#fff"
-                  }}
-                >
-                  1402
+                  1400
                 </Typography>
               </Typography>
             </ListItem>
           </List>
         </Grid>
       </Grid>
-      <Certificates />
     </>
   )
 }
 
-export default Educations
+export default EducationsAndCareer
