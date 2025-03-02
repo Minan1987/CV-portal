@@ -6,8 +6,29 @@ import {
     FmdGoodOutlined,
     PhoneEnabledOutlined
 } from '@mui/icons-material';
+import emailjs from '@emailjs/browser';
 
 const Contcat = () => {
+    const sendEmail = (e) => {
+        e.preventDefault();
+        emailjs.sendForm(
+            'service_i22480j',
+            'template_25wmhfq',
+            e.target,
+            'WjTWbuqJG3N6ilwCW'
+        ).then(
+            (result) => {
+                console.log('Success:', result.text);
+            }
+        )
+            .catch(
+                (error) => {
+                    console.log('Error:', error.text);
+                }
+            );
+        e.target.reset();
+    }
+
     return (
         <Grid container>
             <Grid item
@@ -63,6 +84,7 @@ const Contcat = () => {
                 </Box>
                 <Box
                     component='form'
+                    onSubmit={sendEmail}
                     sx={{ '& > :not(style)': { mt: 5 } }}
                 >
                     <div
@@ -74,6 +96,7 @@ const Contcat = () => {
                         <TextField
                             id="outlined-basic"
                             label="نام شما"
+                            name="name"
                             variant="outlined"
                             color='warning'
                             sx={{ minWidth: "29ch", m: 1 }}
@@ -81,6 +104,7 @@ const Contcat = () => {
                         <TextField
                             id="outlined-basic"
                             label="ایمیل شما"
+                            name="email"
                             variant="outlined"
                             color='warning'
                             sx={{ minWidth: "29ch", m: 1 }}
@@ -97,6 +121,7 @@ const Contcat = () => {
                         <TextField
                             id="outlined-multiline-static"
                             label="چطور میتونم به شما کمک کنم؟"
+                            name="message"
                             multiline
                             rows={4}
                             variant="outlined"
