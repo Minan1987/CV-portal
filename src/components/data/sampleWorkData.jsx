@@ -2,7 +2,7 @@ export const sampleWorks = [
     { 
       title: "توسعه یک پروژه کوچک مدیریت مخاطبین با استفاده از کتابخانه React", 
       image: "/images/blog1.jpg", 
-      link: "https://contact.graphicalweb.ir",
+      link: "https://contact.bluenet.ir",
       date: "اردیبهشت ۱۴۰۳" 
     },
     { 
