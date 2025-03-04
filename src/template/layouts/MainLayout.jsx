@@ -24,7 +24,7 @@ const MainLayout = ({ children }) => {
                         <title>پورتال شخصی مینا نظری</title>
                     </Helmet>
                     <CssBaseline />
-                    <Grid container sx={{ height: '100vh', display: "flex" }}>
+                    <Grid container >
                         {children}
                     </Grid>
                 </HelmetProvider>

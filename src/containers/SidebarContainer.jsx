@@ -10,7 +10,7 @@ const SidebarContainer = ({ children }) => {
                 bgcolor: grey[800],
                 height: "100vh",
                 overflowY: "auto",
-                overflowX: "hidden",
+                scrollbarWidth:"none",
                 display: { xs: "none", md: "block" } // Hide on xs and sm
             }}
             md={3}

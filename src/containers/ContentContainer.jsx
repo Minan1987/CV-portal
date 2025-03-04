@@ -3,7 +3,11 @@ import { grey } from '@mui/material/colors';
 
 const ContentContainer = ({ children }) => {
     return (
-        <Grid item sx={{ backgroundColor: grey[900] }}
+        <Grid item
+            sx={{
+                backgroundColor: grey[900],
+                scrollbarWidth: "none"
+            }}
             xs={12}
             sm={12}
             md={9}

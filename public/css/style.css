@@ -1,22 +1,49 @@
-a{
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+ body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    -ms-overflow-style: none;
+    scrollbar-width: none !important;
+}
+
+a {
     text-decoration: none;
     color: inherit;
 }
+
 .muirtl-3tyok0-MuiButtonBase-root-MuiTab-root.Mui-selected {
     color: orange !important;
 }
 
-.muirtl-1olk2g7-MuiTabs-indicator{
+.muirtl-1olk2g7-MuiTabs-indicator {
     background-color: orange !important;
 }
+
 .MuiTab-root {
     min-height: 50px !important;
     background-color: #555 !important;
     margin: 5px 0 !important;
     border-radius: 3px !important;
-    
+
 }
 
 .MuiTab-root.Mui-selected {
     color: orange !important;
+}
+
+.slick-slider {
+    max-width: 100vw;
+    overflow: hidden;
+}
+
+.slick-track {
+    display: flex;
 }

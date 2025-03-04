@@ -38,18 +38,21 @@ const SkillsCarousel = () => {
     ]
   };
 
- 
+
   return (
-    <Slider {...settings}>
-      {
-        skills.map((skill, index) => (
-          <Box key={index} sx={{ display: "flex !important", justifyContent: "center", alignItems: "center" }}>
-            <img src={skill.src} alt={skill.name} style={{ width: "150px", height: "150px" }} />
-          </Box>
-        ))
-      }
-  
-    </Slider>
+    <Box sx={{ width: "100%", overflow: "hidden" , mb:"20px"}}>
+      <Slider {...settings}>
+        {
+          skills.map((skill, index) => (
+            <Box key={index} sx={{ display: "flex !important", justifyContent: "center", alignItems: "center" }}>
+              <img src={skill.src} alt={skill.name} style={{ width: "150px", height: "150px" }} />
+            </Box>
+          ))
+        }
+
+      </Slider>
+    </Box>
+
   )
 }
 

@@ -5,14 +5,14 @@ import Certificates from './components/Certificates';
 
 const CoursesAndCertification = () => {
   return (
-    <Grid container>
+    <Grid container >
       <Grid item
         xs={12}
         sm={12}
         md={12}
         lg={12}
       >
-        <Box sx={{ display: "flex", justifyContent: "space-between", p: 3, width: 1 }}>
+        <Box sx={{ display: "flex", justifyContent: "space-between", p: 3, width: "100%" }}>
           <Typography variant='h4' color='orange'>دوره ها و گواهینامه ها</Typography>
           <CardMembershipOutlined fontSize='large' sx={{ color: "orange" }} />
         </Box>
@@ -31,8 +31,8 @@ const CoursesAndCertification = () => {
         lg={12}
       >
         <List sx={{
-          display:"flex",
-          justifyContent:"center",
+          display: { xs: "block", md: "flex" },
+          justifyContent: "center",
           position: "relative",
           margin: "20px 0 20px 50px",
           padding: "50px 0 0 0",
@@ -255,7 +255,7 @@ const CoursesAndCertification = () => {
           </ListItem>
         </List>
       </Grid>
-      <Certificates />
+      {/* <Certificates /> */}
     </Grid>
   )
 }

@@ -37,16 +37,14 @@ const EducationsAndCareer = () => {
             }}
           />
         </Grid>
-        <Grid container sx={{ overflowX: "hidden" }}>
-        </Grid>
+
         <Grid item
           xs={12}
           sm={12}
-          md={6}
+          md={12}
           lg={6}
-          sx={{ maxWidth: "45%" }}
         >
-          <Box sx={{ width: 1, textAlign: "center", pt: 2 }}>
+          <Box sx={{ width: "100%", textAlign: "center", pt: 2 }}>
             <Typography variant='h6'
               sx={{
                 width: "fit-content",
@@ -295,9 +293,8 @@ const EducationsAndCareer = () => {
         <Grid item
           xs={12}
           sm={12}
-          md={6}
+          md={12}
           lg={6}
-          sx={{ maxWidth: "45%" }}
         >
           <Box sx={{ width: 1, textAlign: "center", pt: 2 }}>
             <Typography variant='h6'

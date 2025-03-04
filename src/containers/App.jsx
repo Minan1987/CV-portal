@@ -23,6 +23,7 @@ const App = () => {
           <Sidebar />
         </SidebarContainer>
         <DrawerActionButton />
+
         {/* ----Main Section---- */}
         <ContentContainer >
           <Page value={value} index={0}>
@@ -44,6 +45,7 @@ const App = () => {
             <Contact />
           </Page>
         </ContentContainer>
+        
       </MainLayout >
     </Context.Provider>
   )
