@@ -149,7 +149,7 @@ const Contcat = () => {
                     sm={12}
                     md={4}
                     lg={4}
-                    sx={{ textAlign: "center", mt: "50px" }}
+                    sx={{ textAlign: "center", my: "50px" }}
                 >
                     <Telegram fontSize="large" color='warning' />
                     <br />

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Grid, Typography, Box, Divider, List, ListItem, ListSubheader } from '@mui/material';
+import { Grid, Typography, Button, Box, Divider, List, ListItem, ListSubheader } from '@mui/material';
 import {
     PersonOutlineOutlined,
     ArrowBackIosNewOutlined,
@@ -8,7 +8,8 @@ import {
     FmdGoodOutlined,
     LanguageOutlined,
     LinkedIn,
-    GitHub
+    GitHub,
+    Download
 } from '@mui/icons-material';
 import { grey, orange } from '@mui/material/colors';
 import SkillsCarousel from './components/SkillsCarosel';
@@ -92,6 +93,18 @@ const About = () => {
                         <Typography variant='body1' component="span" color={grey[400]}>تهران- مرزداران  </Typography>
                     </ListItem>
                 </List>
+                <Box sx={{ width: "100%", textAlign: "center" }}>
+                    <Button
+                        variant="contained"
+                        color='warning'
+                        startIcon={<Download />}
+                        component="a"
+                        href="/images/MinaNazari(CV2025)EN.pdf"
+                        download="MinaNazari_CV.pdf"
+                    >
+                        دانلود فایل رزومه
+                    </Button>
+                </Box>
             </Grid>
             <Grid item
                 xs={12}

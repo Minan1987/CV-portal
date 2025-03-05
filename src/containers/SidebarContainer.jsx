@@ -11,7 +11,7 @@ const SidebarContainer = ({ children }) => {
                 height: "100vh",
                 overflowY: "auto",
                 scrollbarWidth:"none",
-                display: { xs: "none", md: "block" } // Hide on xs and sm
+                display: { xs: "none", md: "block" }
             }}
             md={3}
             lg={2}
