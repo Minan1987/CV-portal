@@ -16,8 +16,23 @@ const CoursesAndCertification = () => {
         md={12}
         lg={12}
       >
-        <Box sx={{ display: "flex", justifyContent: "space-between", p: 3, width: "100%" }}>
-          <Typography variant='h4' color='orange'>دوره ها و گواهینامه ها</Typography>
+        <Box sx=
+          {{
+            display: "flex",
+            justifyContent: "space-between",
+            p: 3,
+            pt: {
+              md: 3,
+              xs: "75px"
+            },
+            width: 1
+          }}>
+          <Typography sx={{
+            fontSize: {
+              xs: '1.5rem',
+              md: '2.125rem',
+            },
+          }} color='orange'>دوره ها و گواهینامه ها</Typography>
           <CardMembershipOutlined fontSize='large' sx={{ color: "orange" }} />
         </Box>
         <Divider variant='middle'
@@ -259,7 +274,16 @@ const CoursesAndCertification = () => {
           </ListItem>
         </List>
       </Grid>
-      <Certificates />
+      <Grid item
+        xs={12}
+        sm={12}
+        md={12}
+        lg={12}
+        sx={{pb: 5}}
+      >
+        <Certificates />
+      </Grid>
+
     </Grid>
   )
 }

@@ -29,8 +29,23 @@ const EducationsAndCareer = () => {
           md={12}
           lg={12}
         >
-          <Box sx={{ display: "flex", justifyContent: "space-between", p: 3, width: 1 }}>
-            <Typography variant='h4' color='orange'>سوابق تحصیلی و شغلی</Typography>
+          <Box sx=
+            {{
+              display: "flex",
+              justifyContent: "space-between",
+              p: 3,
+              pt: {
+                md: 3,
+                xs: "75px"
+              },
+              width: 1
+            }}>
+            <Typography sx={{
+              fontSize: {
+                xs: '1.5rem', 
+                md: '2.125rem',
+              },
+            }} color='orange'>سوابق تحصیلی و شغلی</Typography>
             <SchoolOutlined fontSize='large' sx={{ color: "orange" }} />
           </Box>
           <Divider variant='middle'
