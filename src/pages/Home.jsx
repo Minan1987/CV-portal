@@ -1,5 +1,6 @@
 import React, { useRef, useEffect } from 'react';
-import { Box, Divider, Typography } from '@mui/material';
+import { Helmet } from "react-helmet-async";
+import { Box, Typography } from '@mui/material';
 import Typed from 'typed.js';
 
 const Home = () => {
@@ -24,6 +25,9 @@ const Home = () => {
 
     return (
         <Box sx={{ position: 'relative', height: '100vh', overflowX: 'hidden' }}>
+            <Helmet>
+                <title>پورتال شخصی مینا نظری|صفحه اصلی</title>
+            </Helmet>
             <video
                 autoPlay
                 loop

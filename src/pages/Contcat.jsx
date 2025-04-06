@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from "react-helmet-async";
 import { Grid, Typography, Box, Divider, TextField, Button } from '@mui/material';
 import {
     AlternateEmailOutlined,
@@ -31,6 +32,9 @@ const Contcat = () => {
 
     return (
         <Grid container>
+            <Helmet>
+                <title>پورتال شخصی مینا نظری|تماس با من</title>
+            </Helmet>
             <Grid item
                 xs={12}
                 sm={12}

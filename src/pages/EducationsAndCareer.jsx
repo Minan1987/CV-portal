@@ -1,4 +1,5 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
+import { Helmet } from "react-helmet-async";
 import {
   Grid,
   Typography,
@@ -19,6 +20,9 @@ const EducationsAndCareer = () => {
   return (
     <>
       <Grid container>
+        <Helmet>
+          <title>پورتال شخصی مینا نظری|سوابق تحصیلی و شغلی</title>
+        </Helmet>
         <Grid item
           xs={12}
           sm={12}

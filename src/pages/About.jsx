@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from "react-helmet-async";
 import { Grid, Typography, Button, Box, Divider, List, ListItem, ListSubheader } from '@mui/material';
 import {
     PersonOutlineOutlined,
@@ -18,6 +19,9 @@ import SkillsCarousel from './components/SkillsCarosel';
 const About = () => {
     return (
         <Grid container sx={{ width: "100%" }}>
+            <Helmet>
+                <title>پورتال شخصی مینا نظری|درباره من</title>
+            </Helmet>
             <Grid item
                 xs={12}
                 sm={12}

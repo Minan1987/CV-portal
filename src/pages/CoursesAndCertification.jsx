@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from "react-helmet-async";
 import { Grid, Typography, Box, Divider, List, ListItem, ListItemText } from '@mui/material';
 import { CardMembershipOutlined } from '@mui/icons-material';
 import Certificates from './components/Certificates';
@@ -6,6 +7,9 @@ import Certificates from './components/Certificates';
 const CoursesAndCertification = () => {
   return (
     <Grid container >
+      <Helmet>
+        <title>پورتال شخصی مینا نظری|دوره ها و گواهینامه ها </title>
+      </Helmet>
       <Grid item
         xs={12}
         sm={12}
@@ -255,7 +259,7 @@ const CoursesAndCertification = () => {
           </ListItem>
         </List>
       </Grid>
-      {/* <Certificates /> */}
+      <Certificates />
     </Grid>
   )
 }
