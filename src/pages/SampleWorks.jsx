@@ -3,9 +3,13 @@ import { Grid, Typography, Box, Divider, Card, CardMedia, CardContent, CardActio
 import { DevicesOutlined } from '@mui/icons-material';
 import { motion } from "framer-motion";
 import { sampleWorks } from '../components/data/sampleWorkData'
-const SampleWorks = () => {
+import { Helmet } from 'react-helmet-async';
+const SampleWorks = ({ helmetTitle }) => {
   return (
     <Grid container>
+      <Helmet>
+        <title>{helmetTitle}</title>
+      </Helmet>
       <Grid item
         xs={12}
         sm={12}

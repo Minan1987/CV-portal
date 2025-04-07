@@ -16,11 +16,11 @@ import { grey, orange } from '@mui/material/colors';
 import SkillsCarousel from './components/SkillsCarosel';
 
 
-const About = () => {
+const About = ({helmetTitle}) => {
     return (
         <Grid container sx={{ width: "100%" }}>
             <Helmet>
-                <title>پورتال شخصی مینا نظری|درباره من</title>
+                <title>{helmetTitle}</title>
             </Helmet>
             <Grid item
                 xs={12}

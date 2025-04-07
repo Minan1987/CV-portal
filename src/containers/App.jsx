@@ -6,7 +6,7 @@ import { Sidebar } from '../components/sidebar';
 import Page from '../pages/components/Page';
 import DrawerActionButton from '../components/drawer/DrawerActionButton'
 import Context from '../context/Context';
-import { Home, About, SampleWorks, Contact,EducationsAndCareer, CoursesAndCertification } from '../pages';
+import { Home, About, SampleWorks, Contact, EducationsAndCareer, CoursesAndCertification } from '../pages';
 
 const App = () => {
   const [value, setValue] = useState(0);
@@ -27,25 +27,25 @@ const App = () => {
         {/* ----Main Section---- */}
         <ContentContainer >
           <Page value={value} index={0}>
-            <Home />
+            <Home helmetTitle="پورتال شخصی مینا نظری|صفحه اصلی" />
           </Page>
           <Page value={value} index={1}>
-            <About />
+            <About helmetTitle="پورتال شخصی مینا نظری|درباره من" />
           </Page>
           <Page value={value} index={2}>
-            <EducationsAndCareer />
+            <EducationsAndCareer helmetTitle="پورتال شخصی مینا نظری|سوابق تحصیلی و شغلی" />
           </Page>
           <Page value={value} index={3}>
-            <CoursesAndCertification />
+            <CoursesAndCertification helmetTitle="پورتال شخصی مینا نظری|دوره ها و گواهینامه ها" />
           </Page>
           <Page value={value} index={4}>
-            <SampleWorks />
+            <SampleWorks helmetTitle="پورتال شخصی مینا نظری|نمونه کارها" />
           </Page>
           <Page value={value} index={5}>
-            <Contact />
+            <Contact helmetTitle="پورتال شخصی مینا نظری|تماس با من" />
           </Page>
         </ContentContainer>
-        
+
       </MainLayout >
     </Context.Provider>
   )

@@ -4,11 +4,11 @@ import { Grid, Typography, Box, Divider, List, ListItem, ListItemText } from '@m
 import { CardMembershipOutlined } from '@mui/icons-material';
 import Certificates from './components/Certificates';
 
-const CoursesAndCertification = () => {
+const CoursesAndCertification = ({ helmetTitle }) => {
   return (
     <Grid container >
       <Helmet>
-        <title>پورتال شخصی مینا نظری|دوره ها و گواهینامه ها </title>
+        <title>{helmetTitle}</title>
       </Helmet>
       <Grid item
         xs={12}
@@ -279,7 +279,7 @@ const CoursesAndCertification = () => {
         sm={12}
         md={12}
         lg={12}
-        sx={{pb: 5}}
+        sx={{ pb: 5 }}
       >
         <Certificates />
       </Grid>

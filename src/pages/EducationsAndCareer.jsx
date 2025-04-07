@@ -12,7 +12,7 @@ import {
 } from '@mui/material';
 import { SchoolOutlined, ArrowLeftOutlined } from '@mui/icons-material';
 
-const EducationsAndCareer = () => {
+const EducationsAndCareer = ({ helmetTitle }) => {
   const [open, setOpen] = useState(true);
   const handleClick = () => [
     setOpen(!open)
@@ -21,7 +21,7 @@ const EducationsAndCareer = () => {
     <>
       <Grid container>
         <Helmet>
-          <title>پورتال شخصی مینا نظری|سوابق تحصیلی و شغلی</title>
+          <title>{helmetTitle}</title>
         </Helmet>
         <Grid item
           xs={12}
@@ -42,7 +42,7 @@ const EducationsAndCareer = () => {
             }}>
             <Typography sx={{
               fontSize: {
-                xs: '1.5rem', 
+                xs: '1.5rem',
                 md: '2.125rem',
               },
             }} color='orange'>سوابق تحصیلی و شغلی</Typography>

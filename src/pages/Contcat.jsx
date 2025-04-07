@@ -9,7 +9,7 @@ import {
 } from '@mui/icons-material';
 import emailjs from '@emailjs/browser';
 
-const Contcat = () => {
+const Contcat = ({ helmetTitle }) => {
     const sendEmail = (e) => {
         e.preventDefault();
         emailjs.sendForm(
@@ -33,7 +33,7 @@ const Contcat = () => {
     return (
         <Grid container>
             <Helmet>
-                <title>پورتال شخصی مینا نظری|تماس با من</title>
+                <title>{helmetTitle}</title>
             </Helmet>
             <Grid item
                 xs={12}
