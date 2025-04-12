@@ -32,12 +32,10 @@ const SidebarHeader = () => {
             sx={{
                 position: "absolute",
                 bottom: "8px",
-                bgcolor: 'rgba(255, 183, 77, 0.5)',
+                bgcolor: 'rgba(255, 183, 77, 0.7)',
                 textShadow: "0 2px 10px rgba(0, 0, 0, 0.5)",
                 width: 1,
-                borderBottomLeftRadius: "5px !important",
-                borderBottomRightRadius: "5px !important",
-                p: "5px",
+                p: "10px",
                 textAlign:"center"
             }}
         >

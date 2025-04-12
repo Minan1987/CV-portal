@@ -11,15 +11,12 @@ const SidebarTabs = () => {
     return (
         <Box sx={{
             textAlign: "center",
-            p: 2
+            p: 0
         }}
         >
             <Tabs value={value}
                 onChange={handleChange}
                 orientation="vertical"
-                variant="scrollable"
-                scrollButtons
-                allowScrollButtonsMobile
                 sx={{ justifyContent: "start" }}
             >
                 {

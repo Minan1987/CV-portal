@@ -12,21 +12,15 @@ const SidebarFooter = ({ open }) => {
     return (
         <Box
             sx={{
-                pt: 2,
+                width: 1,
+                position:"absolute",
+                bottom: 0,
+                pb: 2,
                 textAlign: "center",
                 // display: open ? "block" : "none",
             }}
         >
-            <Divider variant='middle'
-                color={grey[600]}
-                sx={{
-                    display: {
-                        xs: "none",
-                        sm: "none",
-                        md: "block",
-                        lg: "block"
-                    }
-                }} />
+          
             <Box sx={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
                 <IconButton component="a" href="https://www.linkedin.com/in/minanazari1" target="_blank">
                     <LinkedIn fontSize='small' sx={{ color: "whitesmoke" }} />

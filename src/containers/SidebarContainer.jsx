@@ -9,7 +9,7 @@ const SidebarContainer = ({ children }) => {
             sx={{
                 bgcolor: grey[800],
                 height: "100vh",
-                overflowY: "auto",
+                position: "relative",
                 scrollbarWidth:"none",
                 display: { xs: "none", md: "block" }
             }}
