@@ -13,8 +13,7 @@ const SidebarFooter = ({ open }) => {
         <Box
             sx={{
                 width: 1,
-                position:"absolute",
-                bottom: 0,
+                mt: "auto",
                 pb: 2,
                 textAlign: "center",
                 // display: open ? "block" : "none",

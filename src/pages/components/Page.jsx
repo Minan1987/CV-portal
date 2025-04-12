@@ -2,6 +2,7 @@ import { Box } from "@mui/material";
 
 const TabPanel = (props) => {
     const { children, value, index, ...others } = props;
+    const isActive = value === index;
 
     return (
         <Box
@@ -15,7 +16,7 @@ const TabPanel = (props) => {
                 height: "100vh", 
                 overflowY: "auto", 
                 overflowX: "auto" ,
-                scrollbarWidth: "none"
+                scrollbarWidth: "none",
             }}
         >
             {value === index && (

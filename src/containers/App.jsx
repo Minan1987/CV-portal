@@ -14,6 +14,7 @@ const App = () => {
   const handleChange = (event, newValue) => {
     setValue(newValue);
   }
+
   return (
     <Context.Provider value={{ value, handleChange, drawerOpen, setDrawerOpen }}>
       <MainLayout>

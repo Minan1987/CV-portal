@@ -9,9 +9,10 @@ const SidebarContainer = ({ children }) => {
             sx={{
                 bgcolor: grey[800],
                 height: "100vh",
-                position: "relative",
+                overflowY : "auto",
                 scrollbarWidth:"none",
-                display: { xs: "none", md: "block" }
+                display: { xs: "none", md: "flex" },
+                flexDirection: "column"
             }}
             md={3}
             lg={2}
